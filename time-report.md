@@ -7,3 +7,7 @@
   - Made the variables for every board
   - Made the winning patterns
   - Made and arranged the board
+
+- 2025-11-04 21:17 worked for 10 minute
+  - Named buttons
+  - Fixed typos
