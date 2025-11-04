@@ -13,6 +13,7 @@ To do:
 Assign buttons
 Make game work
 Write the stuff on the right side maybe
+Fix the typos
 
 
 # Project Summary
@@ -20,5 +21,6 @@ Write the stuff on the right side maybe
 > Before the final submission date you should include a "PROJECT SUMMARY" in this section here. 
 
 # User Guide
+
 
 > Write a clear user guide for how someone should use your program.
