@@ -1,0 +1,170 @@
+<style>
+    .grid {
+        display: grid;
+        gap: 3px;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px;
+    }
+    
+    button {
+        padding: 15px;
+    }
+</style>
+
+
+<div class="grid">
+    <div class="grid">
+
+        <div class="grid">
+            <button id="TL1" onClick="getButton(this)"></button>
+            <button id="TL2" onClick="getButton(this)"></button>
+            <button id="TL3" onClick="getButton(this)"></button>
+            <button id="TL4" onClick="getButton(this)"></button>
+            <button id="TL5" onClick="getButton(this)"></button>
+            <button id="TL6" onClick="getButton(this)"></button>
+            <button id="TL7" onClick="getButton(this)"></button>
+            <button id="TL8" onClick="getButton(this)"></button>
+            <button id="TL9" onClick="getButton(this)"></button>
+        </div>
+        <div class="grid">
+            <button id="TM1" onClick="getButton(this)"></button>
+            <button id="TM2" onClick="getButton(this)"></button>
+            <button id="TM3" onClick="getButton(this)"></button>
+            <button id="TM4" onClick="getButton(this)"></button>
+            <button id="TM5" onClick="getButton(this)"></button>
+            <button id="TM6" onClick="getButton(this)"></button>
+            <button id="TM7" onClick="getButton(this)"></button>
+            <button id="TM8" onClick="getButton(this)"></button>
+            <button id="TM9" onClick="getButton(this)"></button>
+        </div>
+        <div class="grid">
+            <button id="TR1" onClick="getButton(this)"></button>
+            <button id="TR2" onClick="getButton(this)"></button>
+            <button id="TR3" onClick="getButton(this)"></button>
+            <button id="TR4" onClick="getButton(this)"></button>
+            <button id="TR5" onClick="getButton(this)"></button>
+            <button id="TR6" onClick="getButton(this)"></button>
+            <button id="TR7" onClick="getButton(this)"></button>
+            <button id="TR8" onClick="getButton(this)"></button>
+            <button id="TR9" onClick="getButton(this)"></button>
+        </div>
+
+        <div class="grid">
+            <button id="ML1" onClick="getButton(this)"></button>
+            <button id="ML2" onClick="getButton(this)"></button>
+            <button id="ML3" onClick="getButton(this)"></button>
+            <button id="ML4" onClick="getButton(this)"></button>
+            <button id="ML5" onClick="getButton(this)"></button>
+            <button id="ML6" onClick="getButton(this)"></button>
+            <button id="ML7" onClick="getButton(this)"></button>
+            <button id="ML8" onClick="getButton(this)"></button>
+            <button id="ML9" onClick="getButton(this)"></button>
+        </div>
+        <div class="grid">
+            <button id="MM1" onClick="getButton(this)"></button>
+            <button id="MM2" onClick="getButton(this)"></button>
+            <button id="MM3" onClick="getButton(this)"></button>
+            <button id="MM4" onClick="getButton(this)"></button>
+            <button id="MM5" onClick="getButton(this)"></button>
+            <button id="MM6" onClick="getButton(this)"></button>
+            <button id="MM7" onClick="getButton(this)"></button>
+            <button id="MM8" onClick="getButton(this)"></button>
+            <button id="MM9" onClick="getButton(this)"></button>
+        </div>
+        <div class="grid">
+            <button id="MR1" onClick="getButton(this)"></button>
+            <button id="MR2" onClick="getButton(this)"></button>
+            <button id="MR3" onClick="getButton(this)"></button>
+            <button id="MR4" onClick="getButton(this)"></button>
+            <button id="MR5" onClick="getButton(this)"></button>
+            <button id="MR6" onClick="getButton(this)"></button>
+            <button id="MR7" onClick="getButton(this)"></button>
+            <button id="MR8" onClick="getButton(this)"></button>
+            <button id="MR9" onClick="getButton(this)"></button>
+        </div>
+
+        <div class="grid">
+            <button id="BL1" onClick="getButton(this)"></button>
+            <button id="BL2" onClick="getButton(this)"></button>
+            <button id="BL3" onClick="getButton(this)"></button>
+            <button id="BL4" onClick="getButton(this)"></button>
+            <button id="BL5" onClick="getButton(this)"></button>
+            <button id="BL6" onClick="getButton(this)"></button>
+            <button id="BL7" onClick="getButton(this)"></button>
+            <button id="BL8" onClick="getButton(this)"></button>
+            <button id="BL9" onClick="getButton(this)"></button>
+        </div>
+        <div class="grid">
+            <button id="BM1" onClick="getButton(this)"></button>
+            <button id="BM2" onClick="getButton(this)"></button>
+            <button id="BM3" onClick="getButton(this)"></button>
+            <button id="BM4" onClick="getButton(this)"></button>
+            <button id="BM5" onClick="getButton(this)"></button>
+            <button id="BM6" onClick="getButton(this)"></button>
+            <button id="BM7" onClick="getButton(this)"></button>
+            <button id="BM8" onClick="getButton(this)"></button>
+            <button id="BM9" onClick="getButton(this)"></button>
+        </div>
+        <div class="grid">
+            <button id="BR1" onClick="getButton(this)"></button>
+            <button id="BR2" onClick="getButton(this)"></button>
+            <button id="BR3" onClick="getButton(this)"></button>
+            <button id="BR4" onClick="getButton(this)"></button>
+            <button id="BR5" onClick="getButton(this)"></button>
+            <button id="BR6" onClick="getButton(this)"></button>
+            <button id="BR7" onClick="getButton(this)"></button>
+            <button id="BR8" onClick="getButton(this)"></button>
+            <button id="BR9" onClick="getButton(this)"></button>
+        </div>
+    </div>
+    <div>
+        tic tac toe
+    </div>
+</div>
+
+
+
+<script>
+    var player1 = true
+    //Variable for player1
+    function getButton(thebuttonthatwasclicked){
+        console.log(thebuttonthatwasclicked.id);
+   
+    var TopLeft = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var TopMiddle = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var TopRight = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var MiddleLeft = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var MiddleMiddle = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var MiddleRight = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var BottomLeft = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var BottomMiddle = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var BottomRight = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var BigBoard = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        // Variable for boards I think
+
+    const WinPatterns = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+            [1, 4, 7],
+            [2, 5, 8],
+            [3, 6, 9],
+            [1, 5, 9],
+            [3, 5, 7]
+        ]
+        // Win patterns to win game maybe
+        
+        // If statements to make button change colours
+        if (player1 == true) {
+            player1 = false
+            thebuttonthatwasclicked.style.background = "blue"
+            console.log("updated to false " + Boolean(player1))
+        }
+      else if (player1 == false) {
+            player1 = true
+            thebuttonthatwasclicked.style.background = "red"
+            console.log("updated to true " + Boolean(player1))
+        }
+       
+    }
+</script>
