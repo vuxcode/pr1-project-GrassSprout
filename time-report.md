@@ -11,3 +11,6 @@
 - 2025-11-04 21:17 worked for 10 minutes
   - Named buttons
   - Fixed typos
+
+- 2025-11-27 16.22 worked for 1 1/2 hours
+ - made buttons show colours
