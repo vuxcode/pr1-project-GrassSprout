@@ -127,9 +127,6 @@
 <script>
     var player1 = true
     //Variable for player1
-    function getButton(thebuttonthatwasclicked){
-        console.log(thebuttonthatwasclicked.id);
-   
     var TopLeft = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     var TopMiddle = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     var TopRight = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -142,7 +139,51 @@
     var BigBoard = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         // Variable for boards I think
 
-    const WinPatterns = [
+    function getButton(thebuttonthatwasclicked){
+        // Create a variable from the ID (on the button)
+        var www = thebuttonthatwasclicked.id;
+        // Convert the last character in the string to a number
+        // and update the variable to be the digit
+        www = Number(www[2]);
+
+        console.log(www)
+        console.log(thebuttonthatwasclicked.id);
+
+        
+        
+        // If statements to make button change colours
+        if (player1 == true) {
+            if (checkIndex(www) == true){
+                console.log("Yaya")
+                player1 = false
+            thebuttonthatwasclicked.style.background = "blue"
+            console.log("updated to false " + Boolean(player1))
+            }
+        }
+      else if (player1 == false) {
+           if (checkIndex(www) == true) {
+            player1 = true
+            thebuttonthatwasclicked.style.background = "red"
+            console.log("updated to true " + Boolean(player1))
+           }
+        }
+       
+    }
+  
+    function checkIndex (id) {
+        console.log("CAN WE SEE THE ID NUMBER HERE? " + id);
+        if (TopLeft.includes(id)) {
+            console.log("It works")
+            if (player1 == true) {TopLeft[id - 1]= "blue" }
+            else {TopLeft[id - 1]= "red"}
+            console.log(TopLeft) 
+            return true
+        }
+    }
+
+    function checkWinner () {
+
+        const WinPatterns = [
             [1, 2, 3],
             [4, 5, 6],
             [7, 8, 9],
@@ -153,18 +194,6 @@
             [3, 5, 7]
         ]
         // Win patterns to win game maybe
-        
-        // If statements to make button change colours
-        if (player1 == true) {
-            player1 = false
-            thebuttonthatwasclicked.style.background = "blue"
-            console.log("updated to false " + Boolean(player1))
-        }
-      else if (player1 == false) {
-            player1 = true
-            thebuttonthatwasclicked.style.background = "red"
-            console.log("updated to true " + Boolean(player1))
-        }
-       
+                
     }
 </script>

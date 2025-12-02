@@ -14,3 +14,6 @@
 
 - 2025-11-27 16.22 worked for 1 1/2 hours
  - made buttons show colours
+
+- 2025-12-02 12.15 worked for 1 1/1 hours
+- made code for updating arrays
