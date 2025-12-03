@@ -146,6 +146,7 @@
         // and update the variable to be the digit
         www = Number(www[2]);
 
+        // Check what button was clicked
         console.log(www)
         console.log(thebuttonthatwasclicked.id);
 
@@ -154,22 +155,27 @@
         // If statements to make button change colours
         if (player1 == true) {
             if (checkIndex(www) == true){
-                console.log("Yaya")
+                console.log("Player 1 played " + thebuttonthatwasclicked.id)
                 player1 = false
             thebuttonthatwasclicked.style.background = "blue"
             console.log("updated to false " + Boolean(player1))
+            // Code that updates the players status and changeds its colour
             }
         }
       else if (player1 == false) {
            if (checkIndex(www) == true) {
+            console.log("Player 2 played " + thebuttonthatwasclicked.id)
             player1 = true
             thebuttonthatwasclicked.style.background = "red"
             console.log("updated to true " + Boolean(player1))
+            // Code that updates the players status and changeds its colour
            }
         }
-       
+        // Using the checkWinner function to check the colours against the winning patterns
+       checkWinner ()
     }
   
+    // Function that checks if number in id matches number in TopLeft array and updates it to player colour
     function checkIndex (id) {
         console.log("CAN WE SEE THE ID NUMBER HERE? " + id);
         if (TopLeft.includes(id)) {
@@ -181,8 +187,8 @@
         }
     }
 
+    // Function that checks for winner! 
     function checkWinner () {
-
         const WinPatterns = [
             [1, 2, 3],
             [4, 5, 6],
@@ -194,6 +200,25 @@
             [3, 5, 7]
         ]
         // Win patterns to win game maybe
-                
+             for (let i = 0; i < WinPatterns.length; i++) {
+                console.log(WinPatterns[i][0] + " - " + WinPatterns[i][1] + " - " + WinPatterns[i][2]);
+                console.log(TopLeft[WinPatterns[i][0] - 1]);
+                // If statements that checks if red or blue matches the winning patterns
+                if (TopLeft[WinPatterns[i][0] - 1] == "blue") {
+                    if (TopLeft[WinPatterns[i][1] - 1] == "blue") {
+                       if (TopLeft[WinPatterns[i][2] - 1] == "blue") {
+                        alert("Winner is Blue!")
+                       }
+                    }
+                }
+                else if (TopLeft[WinPatterns[i][0] - 1] == "red") {
+                        if (TopLeft[WinPatterns[i][1] - 1] == "red") {
+                            if (TopLeft[WinPatterns[i][2] - 1] == "red") {
+                                alert("Winner is Red!")
+                            }
+                        }
+                    }
+             }  
+             
     }
 </script>

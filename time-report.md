@@ -12,8 +12,11 @@
   - Named buttons
   - Fixed typos
 
-- 2025-11-27 16.22 worked for 1 1/2 hours
+- 2025-11-27 16.22 worked for 1 hours and 30 minutes
  - made buttons show colours
 
-- 2025-12-02 12.15 worked for 1 1/1 hours
+- 2025-12-02 12.15 worked for 1 hours and 30 minutes
 - made code for updating arrays
+
+- 2025-12-03 15.02 worked for 1 hours and 30 minutes
+- Made the checkWinner function work :) You can now win a game
