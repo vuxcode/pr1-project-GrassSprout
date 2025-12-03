@@ -10,10 +10,10 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 > You can use this section of the file to keep notes about your project as you work on it.
 To do:
-Assign buttons
-Make game work
+Fix the bugs
 Write the stuff on the right side maybe
 Fix the typos
+
 
 
 # Project Summary
@@ -24,3 +24,4 @@ Fix the typos
 
 
 > Write a clear user guide for how someone should use your program.
+
