@@ -20,3 +20,10 @@
 
 - 2025-12-03 15.02 worked for 1 hours and 30 minutes
 - Made the checkWinner function work :) You can now win a game
+
+- 2025-12-10 17.52 worked for 3 hours
+- Assigned arrays to button (You can no longer win by playing one game on multiple boards)
+- Made it so you can only win if 3 small boards match winning conditions
+- Made it so only one board is playable based on corresponding button that was clicked
+- Added current playable board and current player for easier navigation of game
+- Completed code 

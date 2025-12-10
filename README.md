@@ -10,10 +10,8 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 > You can use this section of the file to keep notes about your project as you work on it.
 To do:
-Fix the bugs
-Write the stuff on the right side maybe
-Fix the typos
-
+Fix any typos
+Write Project Summary and User Guide
 
 
 # Project Summary
