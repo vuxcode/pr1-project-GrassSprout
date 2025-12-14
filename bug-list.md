@@ -4,6 +4,9 @@
 
 1. Problem: It plays on every "board" and you can win by using multiple boards as long as it corresponds with a number in the TopLeft array
  Solution: Assigned the buttons to the corresponding arrays and the checkWinner checks every array
+
 2. Problem: BigBoard Array doesn't update correctly
 Solution: Moved the code into for loops
-3. Problem: 
+
+3. Problem: No draw code. User can end up in a draw and nothing will happen to the small boards or big boards
+Solution: Nothing yet
