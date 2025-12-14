@@ -1,4 +1,5 @@
 <meta name="color-scheme" content="dark">
+<!--Make screen dark mode-->
 <style>
     .grid {
         display: grid;
@@ -11,8 +12,9 @@
         padding: 15px;
     }
 </style>
-
-
+<!--Style for the grid and adding to make it look like I wanted-->
+<!--Buttons divided into grids that are divided into grids to arrange into the board-->
+<!--Each Button has a data-array that shows what array it belongs too and an ID to show what button and a function-->
 <div class="grid">
     <div class="grid">
         <div class="grid">
@@ -115,8 +117,9 @@
             <button data-array="BottomRight" id="BR9" onClick="getButton(this)"></button>
         </div>
     </div>
+    <!--Text that explains what to do and shows what board and player is current-->
     <div>
-        Ultimate Tic Tac Toe <br> <br> Red vs. Blue <br> <br> RULES: <br> Click on any board to start! <br> The button you press corresponds with a board, try to click in that corresponding board! <br> Ex: Middle button is always the middle board <br>        If you win a board you get to choose any board you want! <br> Try to get 3 boards in a row to win! <br> <br> Good Luck!
+        Ultimate Tic Tac Toe <br> <br> Red vs. Blue <br> <br> RULES: <br> Click on any button to start! <br> The button you press corresponds with a board, try to click in that corresponding board! <br> Ex: Middle button is always the middle board <br>        If you win a board you get to choose any board you want! <br> Try to get 3 boards in a row to win! <br> <br> Good Luck!
     </div>
     <div class="text" id="container"></div>
 </div>
@@ -126,7 +129,7 @@
 <script>
     var player1 = true
     var playercolour
-        //Variable for player1
+        //Variable for player and variable to update text to tell user what colour is playing
     var TopLeft = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     var TopMiddle = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     var TopRight = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -137,7 +140,7 @@
     var BottomMiddle = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     var BottomRight = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     var BigBoard = [TopLeft, TopMiddle, TopRight, MiddleLeft, MiddleMiddle, MiddleRight, BottomLeft, BottomMiddle, BottomRight]
-        // Variable for boards I think
+        // Variable for boards
     var correctBoard = "any"
         // Variable for making the correct board work
 
@@ -151,27 +154,8 @@
         // Assign button to array
         var arraytofind = thebuttonthatwasclicked.getAttribute("data-array");
         var allbuttons = document.querySelectorAll('[data-array]');
-        var buttonarray
-        if (arraytofind == "TopLeft") {
-            buttonarray = TopLeft
-        } else if (arraytofind == "TopMiddle") {
-            buttonarray = TopMiddle
-        } else if (arraytofind == "TopRight") {
-            buttonarray = TopRight
-        } else if (arraytofind == "MiddleLeft") {
-            buttonarray = MiddleLeft
-        } else if (arraytofind == "MiddleMiddle") {
-            buttonarray = MiddleMiddle
-        } else if (arraytofind == "MiddleRight") {
-            buttonarray = MiddleRight
-        } else if (arraytofind == "BottomLeft") {
-            buttonarray = BottomLeft
-        } else if (arraytofind == "BottomMiddle") {
-            buttonarray = BottomMiddle
-        } else if (arraytofind == "BottomRight") {
-            buttonarray = BottomRight
-        }
-        // Buttons assigned to corrct array
+        var buttonarray = helpme(arraytofind)
+
 
         // Check what button was clicked
         console.log(www)
@@ -243,7 +227,7 @@
             console.log("CORRECT BOARD IS HERE " + correctBoard)
         }
         // if statement to make it so player can choose any board if one is won
-        if (BigBoard[id - 1] == "red" || BigBoard[id - 1] == "blue") {
+        if (BigBoard[id - 1] == "red" || BigBoard[id - 1] == "blue" || checkDraw(helpme(correctBoard))) {
             correctBoard = "any"
         }
         // Make button change the number in the array to corresponding colour
@@ -275,7 +259,8 @@
                 [1, 5, 9],
                 [3, 5, 7]
             ]
-            // Win patterns to win game maybe
+            // Win patterns to win game 
+
         for (let i = 0; i < WinPatterns.length; i++) {
             console.log(WinPatterns[i][0] + " - " + WinPatterns[i][1] + " - " + WinPatterns[i][2]);
             console.log(buttonarray[WinPatterns[i][0] - 1]);
@@ -309,6 +294,12 @@
                 }
             }
         }
+        // Updates the BigBoard array to say draw when its a draw
+        if (checkDraw(buttonarray)) {
+            winner = "draw"
+            BigBoard[tocolour] = winner
+        }
+
         // Code for checking the winner on all boards
         console.log(BigBoard)
         for (let i = 0; i < WinPatterns.length; i++) {
@@ -331,6 +322,68 @@
                 }
             }
         }
+        //Code for draw on bigboard
+        if (Ends(BigBoard)) {
+            alert("It is a draw!")
+        }
+    }
 
+    // Function to check for draw
+    function checkDraw(buttonarray) {
+        // for loop to check if array has numbers
+        for (let i = 0; i < buttonarray.length; i++) {
+            // Using a typeof function to check if input is a number
+            if (typeof buttonarray[i] === 'number') {
+                console.log("Not a draw")
+                console.log(buttonarray[i])
+                    // Returns true to see that there is not a draw
+                return false;
+            }
+        }
+        // Returns false if there is a draw
+        console.log("Its a draw")
+        return true
+    }
+
+    // Function to find array from string
+    function helpme(arraytofind) {
+        var buttonarray
+        if (arraytofind == "TopLeft") {
+            buttonarray = TopLeft
+        } else if (arraytofind == "TopMiddle") {
+            buttonarray = TopMiddle
+        } else if (arraytofind == "TopRight") {
+            buttonarray = TopRight
+        } else if (arraytofind == "MiddleLeft") {
+            buttonarray = MiddleLeft
+        } else if (arraytofind == "MiddleMiddle") {
+            buttonarray = MiddleMiddle
+        } else if (arraytofind == "MiddleRight") {
+            buttonarray = MiddleRight
+        } else if (arraytofind == "BottomLeft") {
+            buttonarray = BottomLeft
+        } else if (arraytofind == "BottomMiddle") {
+            buttonarray = BottomMiddle
+        } else if (arraytofind == "BottomRight") {
+            buttonarray = BottomRight
+        }
+
+        return buttonarray
+    }
+
+    // function to check for draw in big board
+    function Ends(BigBoard) {
+        for (let i = 0; i < BigBoard.length; i++) {
+            // Using a typeof function to check if input is not a string
+            if (!(typeof BigBoard[i] === 'string')) {
+                console.log("Not a draw")
+                console.log(BigBoard[i])
+                    // Returns true to see that there is not a draw
+                return false;
+            }
+        }
+        // Returns false if there is a draw
+        console.log("Its a draw")
+        return true
     }
 </script>

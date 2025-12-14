@@ -27,3 +27,8 @@
 - Made it so only one board is playable based on corresponding button that was clicked
 - Added current playable board and current player for easier navigation of game
 - Completed code 
+
+- 2025-12-10 18.20 worked for 2 hours
+- Made code for draw on small board
+- Made code for draw on big board
+
