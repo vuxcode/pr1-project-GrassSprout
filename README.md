@@ -13,7 +13,6 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 # Project Summary
 
-> Before the final submission date you should include a "PROJECT SUMMARY" in this section here. 
 I made a 2 player version of Ultimate tic tac toe with colour changing buttons. It is tic tac toe but larger and more complex. The program tracks what player is playing and what board is playable based on the other players moves. 
 When a board is won it turns to the winners colour and becomes unplayable. The game is won when the boards show a winning pattern. It is currently not possible to make a draw and the game will just be in a stand still. This goes for both the small boards and big board. 
 I had some troubles with the code. I didn't want to change the first code I wrote and instead fix the problems that appeared along the way. It was a little complicated fixing these problems using what I had learnt in this course. I searched up ways to fix my problems and also asked for help. I tried to fix them with my knowledge first. 
@@ -27,9 +26,9 @@ I worked less than half of the budget. I started a bit late but finished the pro
 
 # User Guide
 
-> Write a clear user guide for how someone should use your program.
 Ultimate Tic Tac Toe is similair to normal Tic Tac Toe but with a bigger board and a few more rules!
 Instead of playing on a singular board you play on 9 boards and your placement matters. The button you press dictates what board the next player can play. 
 For example: If you click the middle button in the middle row on any of the boards, the next player have to click a button in the middle board in the middle row and so on. 
 When you win a small board it will change the whole board to your colour. Your goal is to win 3 boards in a normal Tic Tac Toe winning pattern! 
 To reset the game you need to refresh the page.
+
