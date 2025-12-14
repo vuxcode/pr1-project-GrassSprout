@@ -8,8 +8,9 @@
 2. Problem: BigBoard Array doesn't update correctly
 Solution: Moved the code into the for loops
 
-3. Problem: No draw code. User can end up in a draw and nothing will happen to the small boards or big boards
+4. Problem: No draw code. User can end up in a draw and nothing will happen to the small boards or big boards
 Solution: I created funcions to check for draws on the small board and the big board and put them in the code
 
-4. Problem: No code to check if board is full, user has to click a button in the board to continue playing 
+5. Problem: No code to check if board is full, user has to click a button in the board to continue playing 
 Solution: created functions to check for draw and moved some code to make it work
+
